@@ -118,7 +118,8 @@ export default () => {
         const extent = coordinate
           .split(';')
           .map((item) => item.split(','))
-          .flat();
+          .flat()
+          .map(Number);
         setImageExtent(extent);
       } else {
         const target = locations.find((item) => item.name === value.choose);
